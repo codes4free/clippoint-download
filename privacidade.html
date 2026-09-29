@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Política de privacidade do ClipPoint, extensão para YouTube da D6lab.">
+    <meta name="theme-color" content="#fbf5e7">
+    <title>Política de privacidade do ClipPoint | D6lab</title>
+    <link rel="stylesheet" href="./site.css">
+  </head>
+  <body>
+    <header class="shell topbar">
+      <a class="brand" href="./" aria-label="ClipPoint — início"><span class="mark" aria-hidden="true">↗</span> ClipPoint <small>by D6lab</small></a>
+      <nav class="nav" aria-label="Navegação principal"><a href="./">Início</a><a href="./instalacao.html">Instalação</a><a href="https://d6lab.com.br/">D6lab</a></nav>
+    </header>
+
+    <main class="shell content">
+      <p class="eyebrow">ClipPoint · D6lab</p>
+      <h1>Política de privacidade</h1>
+      <p>Última atualização: 13 de setembro de 2026</p>
+      <p>O ClipPoint é uma extensão da D6lab que analisa vídeos do YouTube quando o usuário solicita. Não vendemos dados nem usamos publicidade personalizada; a análise é feita por provedores externos com as chaves fornecidas pelo usuário.</p>
+
+      <h2>Dados tratados</h2>
+      <ul>
+        <li>URL, identificador, título e canal do vídeo selecionado.</li>
+        <li>Legendas nativas públicas, usadas para gerar resumo, pontos-chave e referências temporais.</li>
+        <li>Comentários públicos de nível superior, apenas quando a tendência está ativada e uma chave do YouTube foi configurada.</li>
+        <li>Chaves BYOK de OpenAI, Supadata e, opcionalmente, YouTube Data API.</li>
+        <li>Resultado da análise e métricas de uso, armazenados localmente conforme a opção escolhida pelo usuário.</li>
+      </ul>
+
+      <h2>Como os dados são usados</h2>
+      <ol>
+        <li>A chave Supadata é enviada à Supadata para consultar legendas nativas públicas do vídeo.</li>
+        <li>A transcrição normalizada e a chave OpenAI são enviadas por HTTPS ao Worker do ClipPoint, que encaminha a solicitação à OpenAI.</li>
+        <li>Se a tendência estiver ativada, o Worker usa a chave do YouTube para consultar a YouTube Data API. A extensão exibe uma amostra limitada dos comentários recentes.</li>
+      </ol>
+      <p>O Worker do ClipPoint não persiste as chaves, transcrições, comentários ou respostas brutas. A D6lab não usa esses dados para publicidade, venda, perfil comportamental ou treinamento próprio. Os provedores externos podem aplicar suas próprias políticas de retenção e privacidade; <code>store: false</code> na OpenAI não significa retenção zero.</p>
+
+      <h2>Armazenamento e segurança</h2>
+      <p>As chaves são guardadas no armazenamento da extensão e podem permanecer somente na sessão ou, se o usuário escolher, no armazenamento local. O cache de resultados fica no dispositivo. As comunicações externas do ClipPoint usam HTTPS. O armazenamento do Chrome não é um cofre de segredos: alguém com acesso ao perfil do navegador ou à extensão pode potencialmente acessar dados salvos localmente.</p>
+
+      <h2>Controle do usuário</h2>
+      <p>O usuário decide quando iniciar uma análise, se deseja ativar a tendência e se quer manter as chaves após a sessão. As chaves e o cache podem ser removidos nas configurações da extensão. Desinstalar a extensão remove os dados armazenados por ela pelo Chrome.</p>
+
+      <h2>Limites</h2>
+      <p>O ClipPoint não baixa nem transcreve áudio, não verifica fatos externamente e não trata comentários como prova. Vídeos sem legendas nativas públicas podem não estar disponíveis para análise. Consultas Supadata e YouTube Data API podem consumir créditos ou quota da conta do próprio usuário.</p>
+
+      <h2>Contato</h2>
+      <p>Para dúvidas sobre privacidade, escreva para <a href="mailto:contato@d6lab.com.br">contato@d6lab.com.br</a> ou visite <a href="https://d6lab.com.br/clippoint/politica-de-privacidade">a página oficial da política no site da D6lab</a>.</p>
+    </main>
+
+    <footer class="shell footer"><span>ClipPoint · D6lab</span><span><a href="./">Início</a> · <a href="./instalacao.html">Instalação</a></span><span>© 2026 D6lab</span></footer>
+  </body>
+</html>
